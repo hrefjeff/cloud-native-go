@@ -14,3 +14,25 @@
 ├── Dockerfile
 └── docker-compose.yml
 ```
+
+## Build and Run
+
+### Docker
+
+```sh
+# Build the Docker image
+docker build -t myapp .
+
+# Run the application
+docker run -p 8080:8080 myapp
+```
+
+### Docker Compose
+
+```sh
+# Build the Docker image
+docker-compose build
+
+# Run the application
+docker-compose up
+```
