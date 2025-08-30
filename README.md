@@ -1,6 +1,16 @@
 # Cloud Native Go
 
-[Cloud Native app development with Go](https://learning-cloud-native-go.github.io/docs/hello-world-server/)
+[Cloud Native app development with Go](https://learning-cloud-native-go.github.io/docs/hello-world-server/) - Simple bookshelf app with Go, PostgreSQL, and Docker. API specifications are as follows:
+
+| Functionality | Resource | Method name | HTTP Method | Route |
+|---------------|----------|-------------|-------------|-------|
+| API Health | health | Read | GET | /livez |
+| List Books | book | List | GET | /v1/books |
+| Create Book | book | Create | POST | /v1/books |
+| Read Book | book | Read | GET | /v1/books/{id} |
+| Update Book | book | Update | PUT | /v1/books/{id} |
+| Delete Book | book | Delete | DELETE | /v1/books/{id} |
+
 
 ## Project Structure
 
