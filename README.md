@@ -17,6 +17,26 @@
 swag init -g cmd/api/main.go -o .swagger -ot yaml
 ```
 
+## Add a book to the shelf and list all the books
+
+```sh
+# Add a book to the shelf
+curl -X 'POST' \
+  'http://localhost:8080/v1/books' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "author": "John Smith",
+  "description": "A fascinating book about cloud native development",
+  "image_url": "https://example.com/book-cover.jpg",
+  "published_date": "2023-01-15",
+  "title": "Cloud Native Go Programming"
+}'
+
+# Get at all the books on the shelf
+curl -X 'GET' http://localhost:8080/v1/books
+````
+
 ## Project Structure
 
 ```sh
