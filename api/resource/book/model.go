@@ -38,6 +38,7 @@ type Book struct {
 
 type Books []*Book
 
+// Helper Functions
 func (f *Form) ToModel() *Book {
 	pubDate, _ := time.Parse("2006-01-02", f.PublishedDate)
 
