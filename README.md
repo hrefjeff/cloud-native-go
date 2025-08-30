@@ -11,6 +11,11 @@
 | Update Book | book | Update | PUT | /v1/books/{id} |
 | Delete Book | book | Delete | DELETE | /v1/books/{id} |
 
+## Generate OAS 2.0
+
+```sh
+swag init -g cmd/api/main.go -o .swagger -ot yaml
+```
 
 ## Project Structure
 
