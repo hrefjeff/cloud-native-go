@@ -56,7 +56,7 @@ func main() {
 		IdleTimeout:  c.Server.TimeoutIdle,
 	}
 
-	log.Println("Starting server " + s.Addr)
+	log.Println("Starting server on " + s.Addr)
 	if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		log.Fatal("Server startup failed")
 	}

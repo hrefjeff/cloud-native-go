@@ -19,14 +19,34 @@ definitions:
     properties:
       author:
         type: string
+        maxLength: 255
+        pattern: '^[a-zA-Z\s]+$'
+        example: "John Smith"
+        description: "Author name (letters and spaces only, max 255 characters)"
       description:
         type: string
+        example: "A fascinating book about cloud native development"
+        description: "Optional book description"
       image_url:
         type: string
+        format: uri
+        example: "https://example.com/book-cover.jpg"
+        description: "Optional URL for book cover image"
       published_date:
         type: string
+        format: date
+        pattern: '^\d{4}-\d{2}-\d{2}$'
+        example: "2023-01-15"
+        description: "Publication date in YYYY-MM-DD format"
       title:
         type: string
+        maxLength: 255
+        example: "Cloud Native Go Programming"
+        description: "Book title (max 255 characters)"
+    required:
+      - title
+      - author
+      - published_date
     type: object
   err.Error:
     properties:
@@ -52,7 +72,7 @@ info:
   title: MYAPP API
   version: "1.0"
 paths:
-  /../livez:
+  /livez:
     get:
       description: Read health
       responses:
