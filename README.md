@@ -60,3 +60,20 @@ go build -o ./bin/api ./cmd/api
 ./bin/migrate create create_books_table sql
 ./bin/migrate up
 ```
+
+## Common troubleshooting commands
+
+```sh
+# Check if api is already running
+lsof -i :8080
+kill -9 <PID>
+
+# View logs
+docker-compose logs
+
+# Access the database container
+docker-compose exec db psql -U myapp_user -d myapp_db
+
+# Run database migrations
+docker-compose exec api /bin/migrate up
+```
