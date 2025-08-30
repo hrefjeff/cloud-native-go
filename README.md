@@ -36,3 +36,12 @@ docker-compose build
 # Run the application
 docker-compose up
 ```
+
+## Database migrations
+
+```sh
+go build -o ./bin/migrate ./cmd/migrate
+go build -o ./bin/api ./cmd/api
+./bin/migrate create create_books_table sql
+./bin/migrate up
+```
